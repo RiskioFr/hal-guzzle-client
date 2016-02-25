@@ -1,0 +1,22 @@
+{
+    "name": "riskio/hal-guzzle-client",
+    "description": "HAL Guzzle Client",
+    "homepage": "https://github.com/RiskioFr/hal-guzzle-client",
+    "require": {
+        "php": ">=5.5",
+        "guzzle/guzzle": "~3.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Riskio\\HalGuzzleClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Riskio\\HalGuzzleClientTest\\": "tests/"
+        }
+    }
+}
