@@ -23,8 +23,11 @@ class HalResourceIterator extends ResourceIterator
         $embedded = $result['_embedded'];
         $data = array_shift($embedded);
 
-        // This avoid to do any additional request
-        if ($result['page_count'] == $result['page']) {
+        if (
+            empty($result['page_count'])
+            || empty($result['page_count'])
+            || $result['page_count'] == $result['page']
+        ) {
             $this->nextToken = false;
         } else {
             $this->nextToken = true;
