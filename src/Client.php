@@ -13,6 +13,10 @@ class Client extends BaseClient
     {
         parent::__construct($baseUrl, $config);
 
+        $this->setConfig([self::CURL_OPTIONS => [
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_0,
+        ]]);
+
         $this->setDefaultOption('headers', [
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
